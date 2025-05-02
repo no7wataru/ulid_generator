@@ -13,17 +13,17 @@ A simple command-line tool to generate ULIDs (Universally Unique Lexicographical
 To build the executable:
 
 ```sh
-go build -o ulid
+go build -o ulidgen
 ```
 
-This will create an executable file named `ulid` in the current directory.
+This will create an executable file named `ulidgen` in the current directory.
 
 ## Usage
 
 To generate ULIDs:
 
 ```sh
-./ulid [-n count]
+./ulidgen [-n count]
 ```
 
 **Options:**
@@ -35,15 +35,14 @@ To generate ULIDs:
 
 Generate a single ULID:
 ```sh
-./ulid
+./ulidgen
 ```
 
 Generate 5 ULIDs:
 ```sh
-./ulid -n 5
+./ulidgen -n 5
 ```
 
 Show help:
 ```sh
-./ulid -h
-
+./ulidgen -h
