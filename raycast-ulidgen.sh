@@ -42,13 +42,8 @@ if [[ ! -x "$ULIDGEN_PATH" ]]; then
     exit 1
 fi
 
-# Generate ULID(s)
-OUTPUT=$("$ULIDGEN_PATH" -n "$COUNT")
+# Generate ULID(s) and copy to clipboard
+"$ULIDGEN_PATH" -n "$COUNT" | pbcopy
 
-# Copy ALL ULIDs to clipboard (maintaining newlines)
-echo "$OUTPUT" | pbcopy
-
-# Print the output for Raycast
-echo "$OUTPUT"
-
-echo "Generated ULID(s) copied to clipboard."
+# Print a confirmation message for Raycast
+echo "$COUNT ULID(s) copied to clipboard."
